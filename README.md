@@ -1,22 +1,30 @@
-# Nuxt Minimal Starter
+# Nuxt Form Engine - Usage Example
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a Nuxt 4 application demonstrating the usage of the Nuxt Form Engine module.
 
 ## Setup
+
+Add the Nuxt Form Engine layer to your `nuxt.config.ts`:
+
+```ts
+export default defineNuxtConfig({
+  layers: ['../nuxt-form-engine'],
+})
+```
+make sure that the path to the layer is correct. you have to have the `nuxt-form-engine` folder next to this project folder.
+
+```
+- /projects
+  |-- /nuxt-form-engine
+  |-- /your-project
+```
+
+or just ensure you're using the correct relative path.
+
 
 Make sure to install dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
 bun install
 ```
 
@@ -25,16 +33,6 @@ bun install
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
 bun run dev
 ```
 
@@ -43,32 +41,12 @@ bun run dev
 Build the application for production:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
 bun run build
 ```
 
 Locally preview production build:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
 bun run preview
 ```
 

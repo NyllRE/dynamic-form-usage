@@ -8,7 +8,7 @@ Add the Nuxt Form Engine layer to your `nuxt.config.ts`:
 
 ```ts
 export default defineNuxtConfig({
-  layers: ['../nuxt-form-engine'],
+  extends: ['../nuxt-form-engine'],
 })
 ```
 make sure that the path to the layer is correct. you have to have the `nuxt-form-engine` folder next to this project folder.

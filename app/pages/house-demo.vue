@@ -15,6 +15,7 @@ const formConfig = defineForm({
 		apiEndpoint: '/api/submit',
 		resumeExpirationDays: 30,
 	},
+	startScreen: <alternativeConfirmScreen />,
 	steps: [
 		{
 			type: 'branch',

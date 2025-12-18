@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="100" viewBox="0 0 180 100">
+  <path
+    id="roof"
+    d="M19.578,5H157.465l20.666,31H1.73Z"
+    fill="#efefef"
+    stroke="#666"
+    stroke-width="2"
+    class="mrc-fill-light-background3 mrc-stroke-border"
+  ></path>
+  <path
+    id="right-side"
+    d="M135,15.129,96,35.6V99h78V35.6Z"
+    fill="#fff"
+    stroke="#666"
+    stroke-width="2"
+    class="mrc-fill-white mrc-stroke-border"
+  ></path>
+  <polygon
+    id="right-side-shading"
+    points="95 40 135 20 175 40 175 37 135 16 95 37 95 40"
+    fill="#666"
+    opacity="0.25"
+    class="mrc-fill-border"
+  ></polygon>
+  <path
+    id="left-side"
+    d="M6,36V95H96V36Z"
+    fill="#fff"
+    stroke="#666"
+    stroke-width="2"
+    class="mrc-fill-white mrc-stroke-border"
+  ></path>
+  <g id="left-window">
+    <rect
+      id="left-window-top"
+      x="22"
+      y="45"
+      width="20"
+      height="16"
+      fill="#fff"
+      stroke="#666"
+      stroke-width="2"
+      class="mrc-fill-white mrc-stroke-border"
+    ></rect>
+    <rect
+      id="left-window-bottom"
+      x="22"
+      y="61"
+      width="20"
+      height="16"
+      fill="#fff"
+      stroke="#666"
+      stroke-width="2"
+      class="mrc-fill-white mrc-stroke-border"
+    ></rect>
+    <rect
+      id="left-window-left-shutter"
+      x="14"
+      y="45"
+      width="8"
+      height="32"
+      fill="#efefef"
+      stroke="#666"
+      stroke-width="2"
+      class="mrc-fill-light-background3 mrc-stroke-border"
+    ></rect>
+    <rect
+      id="left-window-right-shutter"
+      x="42"
+      y="45"
+      width="8"
+      height="32"
+      fill="#efefef"
+      stroke="#666"
+      stroke-width="2"
+      class="mrc-fill-light-background3 mrc-stroke-border"
+    ></rect>
+  </g>
+  <g id="right-window">
+    <rect
+      id="right-window-top-left"
+      x="118"
+      y="47"
+      width="17"
+      height="15"
+      fill="#fff"
+      stroke="#666"
+      stroke-width="2"
+      class="mrc-fill-white mrc-stroke-border"
+    ></rect>
+    <rect
+      id="right-window-top-right"
+      x="135"
+      y="47"
+      width="17"
+      height="15"
+      fill="#fff"
+      stroke="#666"
+      stroke-width="2"
+      class="mrc-fill-white mrc-stroke-border"
+    ></rect>
+    <rect
+      id="right-window-bottom-left"
+      x="118"
+      y="62"
+      width="17"
+      height="15"
+      fill="#fff"
+      stroke="#666"
+      stroke-width="2"
+      class="mrc-fill-white mrc-stroke-border"
+    ></rect>
+    <rect
+      id="right-window-bottom-right"
+      x="135"
+      y="62"
+      width="17"
+      height="15"
+      fill="#fff"
+      stroke="#666"
+      stroke-width="2"
+      class="mrc-fill-white mrc-stroke-border"
+    ></rect>
+    <rect
+      id="right-window-left-shutter"
+      x="110"
+      y="47"
+      width="8"
+      height="30"
+      fill="#efefef"
+      stroke="#666"
+      stroke-width="2"
+      class="mrc-fill-light-background3 mrc-stroke-border"
+    ></rect>
+    <rect
+      id="right-window-right-shutter"
+      x="152"
+      y="47"
+      width="8"
+      height="30"
+      fill="#efefef"
+      stroke="#666"
+      stroke-width="2"
+      class="mrc-fill-light-background3 mrc-stroke-border"
+    ></rect>
+  </g>
+  <circle
+    id="circle-window"
+    cx="135"
+    cy="33"
+    r="6"
+    fill="#fff"
+    stroke="#666"
+    stroke-width="2"
+    class="mrc-fill-white mrc-stroke-border"
+  ></circle>
+  <path
+    id="bush2"
+    d="M160,91a10,10,0,0,1,10,10H124a10,10,0,0,1,16.5-7.6,10,10,0,0,1,13,0A9.959,9.959,0,0,1,160,91Z"
+    fill="#dadada"
+    stroke="#fff"
+    stroke-width="2"
+    class="mrc-fill-light-background4 mrc-stroke-white"
+  ></path>
+  <path
+    id="bush1"
+    d="M14.786,84A15.885,15.885,0,0,0,3.63,88.533,15.313,15.313,0,0,0-1,99.5c0,.179,0,.358.009.535h0l.034.966H46.992a11.08,11.08,0,0,0-3.571-8.576,11.562,11.562,0,0,0-14.929-.617,15.691,15.691,0,0,0-5.233-5.387A15.919,15.919,0,0,0,14.786,84Z"
+    fill="#dadada"
+    stroke="#fff"
+    stroke-width="2"
+    class="mrc-fill-light-background4 mrc-stroke-white"
+  ></path>
+  <g id="front-door">
+    <path
+      id="entryway"
+      d="M89,93V61a15,15,0,0,0-30,0V93Z"
+      fill="#fff"
+      stroke="#666"
+      stroke-width="2"
+      class="mrc-fill-white mrc-stroke-border"
+    ></path>
+    <path
+      id="step"
+      d="M59,93v5H89V93Z"
+      fill="#aaa"
+      stroke="#666"
+      stroke-width="2"
+      class="mrc-fill-light-background5 mrc-stroke-border"
+    ></path>
+    <path
+      id="door"
+      d="M84,65V93H64V65Z"
+      fill="#dadada"
+      stroke="#666"
+      stroke-width="2"
+      class="mrc-fill-light-background4 mrc-stroke-border"
+    ></path>
+    <circle id="door-knob" cx="70" cy="79" r="2" fill="#666" class="mrc-fill-border"></circle>
+    <path
+      id="door-window"
+      d="M74,51A10,10,0,0,1,84,61H64A10,10,0,0,1,74,51Z"
+      fill="#fff"
+      stroke="#666"
+      stroke-width="2"
+      class="mrc-fill-white mrc-stroke-border"
+    ></path>
+  </g>
+  <polygon
+    id="roof-shading"
+    points="7 37 95 37 95 39 11 39 7 37"
+    fill="#666"
+    opacity="0.25"
+    class="mrc-fill-border"
+  ></polygon>
+</svg>

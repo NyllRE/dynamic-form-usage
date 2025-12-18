@@ -6,6 +6,9 @@
 
 <script setup lang="tsx">
 import * as z from 'zod'
+import finance from '~/assets/svg/finance.svg'
+import home from '~/assets/svg/home.svg'
+import AreaSelectStep from '~/components/AreaSelectStep.vue'
 
 const formConfig = defineForm({
 	id: 'house-example-form',
@@ -22,17 +25,24 @@ const formConfig = defineForm({
 			id: 'branch-step',
 			title: 'Get Pre-Approved Today!',
 			description: 'Select one of the options to proceed to the corresponding form step.',
+			name: 'loanType',
 			choices: [
 				{
+					value: 'buy',
 					label: 'I want to Buy a home',
+					illustration: home, // or '/images/house.png'
+					highlight: { before: 'I want to', word: 'Buy', after: 'a home' },
 				},
 				{
-					label: 'I want to Refinance a home',
+					value: 'refinance',
+					label: 'I want to Refinance my home',
+					illustration: finance,
+					highlight: { before: 'I want to', word: 'Refinance', after: 'my home' },
 				},
 			],
 			routes: [
 				{
-					id: 'I want to Buy a home',
+					id: 'buy',
 					steps: [
 						{
 							type: 'form',
@@ -90,26 +100,11 @@ const formConfig = defineForm({
 							],
 						},
 						{
-							type: 'form',
+							type: 'custom',
 							id: 'area',
 							title: 'Where are you looking to buy?',
 							description: 'Enter the city or zip code of the area where you are home shopping.',
-							schema: z.object({
-								area: z.string().min(2, 'Please select an option'),
-							}),
-							fields: [
-								{
-									type: 'input',
-									name: 'area',
-									props: {
-										placeholder: 'City or ZIP Code',
-									},
-									fieldProps: {
-										label: 'Preferred Area',
-										required: true,
-									},
-								},
-							],
+							component: <AreaSelectStep />,
 						},
 						{
 							type: 'form',
@@ -135,7 +130,7 @@ const formConfig = defineForm({
 					],
 				},
 				{
-					id: 'I want to Refinance a home',
+					id: 'refinance',
 					steps: [
 						{
 							type: 'form',

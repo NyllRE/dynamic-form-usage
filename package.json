@@ -14,7 +14,6 @@
     "@pinia/nuxt": "^0.11.3",
     "eslint": "^9.39.1",
     "nuxt": "^4.2.1",
-    "pinia": "^3.0.4",
     "pinia-plugin-persistedstate": "^4.7.1",
     "typescript": "^5.9.3",
     "vue": "^3.5.25",

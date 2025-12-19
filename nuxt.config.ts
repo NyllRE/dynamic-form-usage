@@ -19,6 +19,7 @@ export default defineNuxtConfig({
 
 	// Layer provides @pinia/nuxt, pinia-plugin-persistedstate, @nuxt/ui, @nuxt/image
 	extends: [
+		// ['../dynamic-form-engine', { install: true }],
 		[
 			'gh:NyllRE/dynamic-form-engine#master',
 			{ giget: { auth: process.env.GITHUB_TOKEN }, install: true },
@@ -28,12 +29,7 @@ export default defineNuxtConfig({
 	// Fix for "vue does not provide an export named 'default'" error in SSR build
 	vite: {
 		resolve: {
-			alias: {
-				vue: 'vue',
-			},
-		},
-		ssr: {
-			noExternal: ['vue'],
+			dedupe: ['vue', 'reka-ui', '@vue/runtime-core', '@vue/runtime-dom'],
 		},
 	},
 

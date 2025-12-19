@@ -26,7 +26,21 @@
 			variant="soft"
 			label="Showcase"
 			> Showcase </UButton>
+
+			<UButton
+			class="my-4"
+			color="neutral"
+			variant="soft"
+			label="About"
+			@click="store.resetAll();"
+			> Reset Stores </UButton>
 		</div>
 
 	</UContainer>
 </template>
+
+<script setup lang="ts">
+
+const { store } = useFormEngine();
+
+</script>

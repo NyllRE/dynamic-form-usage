@@ -25,6 +25,18 @@ export default defineNuxtConfig({
 		],
 	],
 
+	// Fix for "vue does not provide an export named 'default'" error in SSR build
+	vite: {
+		resolve: {
+			alias: {
+				vue: 'vue',
+			},
+		},
+		ssr: {
+			noExternal: ['vue'],
+		},
+	},
+
 	eslint: {
 		config: {
 			// Use the generated ESLint config for lint root project as well

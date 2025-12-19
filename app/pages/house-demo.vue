@@ -8,6 +8,7 @@
 import * as z from 'zod';
 import finance from '~/assets/svg/finance.svg';
 import home from '~/assets/svg/home.svg';
+import AlternativeConfirmScreen from '~/components/alternativeConfirmScreen.vue';
 
 const formConfig = defineForm({
   id: 'house-example-form',
@@ -17,7 +18,7 @@ const formConfig = defineForm({
     apiEndpoint: '/api/submit',
     resumeExpirationDays: 30,
   },
-  startScreen: <alternativeConfirmScreen />,
+  startScreen: <AlternativeConfirmScreen />,
   steps: [
     {
       type: 'branch',

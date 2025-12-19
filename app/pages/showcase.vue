@@ -8,6 +8,7 @@
 import * as z from 'zod'
 import { useFormStore } from '../../app/stores/form'
 import { videoPlayer } from '#layers/dynamic-form-engine/components/VideoPlayer.vue'
+import ConfirmScreen from '~/components/ConfirmScreen.vue';
 
 const formConfig = defineForm({
 	id: 'example-form',

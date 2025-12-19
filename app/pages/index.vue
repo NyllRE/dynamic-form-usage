@@ -40,6 +40,7 @@
 </template>
 
 <script setup lang="ts">
+import { useFormEngine } from '#imports';
 
 const { store } = useFormEngine();
 

@@ -1,6 +1,14 @@
 /** @format */
-// @ts-expect-error: bun issue
+
+// Ensure `.env` is loaded before Nuxt evaluates `nuxt.config.*`.
+// This is required for `extends: ['github:…', { auth: … }]` where `auth` is read at config-eval time.
+import { loadEnv } from 'vite'
+
 import { fileURLToPath } from 'node:url'
+
+// Load .env files before Nuxt config evaluation
+const env = loadEnv('', process.cwd(), '')
+Object.assign(process.env, env)
 
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -10,7 +18,12 @@ export default defineNuxtConfig({
 	modules: ['@nuxt/eslint'],
 
 	// Layer provides @pinia/nuxt, pinia-plugin-persistedstate, @nuxt/ui, @nuxt/image
-	extends: [['../dynamic-form-engine', { install: true }]],
+	extends: [
+		[
+			'gh:NyllRE/dynamic-form-engine#master',
+			{ giget: { auth: process.env.GITHUB_TOKEN }, install: true },
+		],
+	],
 
 	eslint: {
 		config: {

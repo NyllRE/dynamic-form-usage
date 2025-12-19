@@ -40,8 +40,8 @@
 </template>
 
 <script setup lang="ts">
-import { useFormEngine } from '#imports';
+import { useFormStore } from '#layers/dynamic-form-engine/app/stores/form';
 
-const { store } = useFormEngine();
+const store = useFormStore();
 
 </script>

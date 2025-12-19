@@ -19,7 +19,13 @@ export default defineNuxtConfig({
 
 	// Layer provides @pinia/nuxt, pinia-plugin-persistedstate, @nuxt/ui, @nuxt/image
 	extends: [
-		['../dynamic-form-engine'],
+		[
+			'../dynamic-form-engine',
+			{
+				install: true,
+				meta: { name: 'dynamic-form-engine' },
+			},
+		],
 		// [
 		// 	'gh:NyllRE/dynamic-form-engine#master',
 		// 	{ giget: { auth: process.env.GITHUB_TOKEN }, install: true },

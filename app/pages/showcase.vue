@@ -4,9 +4,9 @@
 	<DynamicForm :config="formConfig" />
 </template>
 
-<script setup lang="tsx">
+<script setup lang="ts">
 import * as z from 'zod'
-import ConfirmScreen from '~/components/ConfirmScreen.vue';
+import ConfirmScreen from '~/components/ConfirmScreen.vue'
 
 const formConfig = defineForm({
 	id: 'example-form',
@@ -16,7 +16,7 @@ const formConfig = defineForm({
 		apiEndpoint: '/api/submit',
 		resumeExpirationDays: 30,
 	},
-	startScreen: <ConfirmScreen />,
+	startScreen: () => h(ConfirmScreen),
 	steps: [
 		{
 			type: 'form',
@@ -84,7 +84,8 @@ const formConfig = defineForm({
 			type: 'custom',
 			id: 'video-step',
 			title: 'Video Example',
-			component: <VideoPlayer videoSrc='https://www.pexels.com/download/video/28541328/' />,
+			component: () =>
+				h(VideoPlayer, { videoSrc: 'https://www.pexels.com/download/video/28541328/' }),
 		},
 		{
 			type: 'form',

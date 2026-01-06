@@ -38,22 +38,48 @@ export default defineNuxtConfig({
 			  ],
 	],
 
-	// Fix for reka-ui SSR issues
+	// Fix for reka-ui SSR issues and Vue default export error
 	vite: {
 		resolve: {
-			dedupe: ['vue', 'reka-ui'],
+			dedupe: [
+				'vue',
+				'vue-router',
+				'@vue/runtime-core',
+				'@vue/runtime-dom',
+				'@vue/reactivity',
+				'reka-ui',
+			],
 		},
 		optimizeDeps: {
 			include: ['vue', 'reka-ui'],
 		},
 		ssr: {
-			noExternal: ['reka-ui'],
+			// Force bundle these packages instead of externalizing - fixes Vue default export issue
+			noExternal: ['reka-ui', '@nuxt/ui', /reka-ui/],
 		},
 	},
 
 	// Build configuration for layer resolution
 	build: {
 		transpile: ['reka-ui'],
+	},
+
+	// Nitro configuration - inline Vue-related packages to avoid ESM/CJS conflicts
+	nitro: {
+		externals: {
+			// Inline all Vue-related packages to prevent "Cannot find module vue/index.mjs" error
+			inline: [
+				'vue',
+				'vue-router',
+				'@vue/runtime-core',
+				'@vue/runtime-dom',
+				'@vue/reactivity',
+				'@vue/shared',
+				'@vue/compiler-dom',
+				'@vue/compiler-core',
+				'reka-ui',
+			],
+		},
 	},
 
 	eslint: {
@@ -74,8 +100,5 @@ export default defineNuxtConfig({
 		colorMode: false,
 	},
 
-	routeRules: {
-		'/': { ssr: false },
-		'/alternative': { ssr: false },
-	},
+	ssr: false,
 })

@@ -1,5 +1,3 @@
-<!-- @format -->
-
 <!-- eslint-disable vue/html-self-closing -->
 <template>
 	<FormPage>

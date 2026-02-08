@@ -7,7 +7,8 @@
 		"dev": "nuxt dev",
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
-		"postinstall": "nuxt prepare"
+		"postinstall": "nuxt prepare",
+		"lint": "oxlint"
 	},
 	"dependencies": {
 		"eslint": "^9.39.2",
@@ -19,6 +20,7 @@
 	},
 	"devDependencies": {
 		"@nuxt/eslint": "^1.12.1",
-		"@types/node": "^25.0.3"
+		"@types/node": "^25.0.3",
+		"oxlint": "^1.41.0"
 	}
 }
